@@ -1,4 +1,4 @@
-"""EX02 - one shot battleship."""
+"""EX02 - one shot battleship. """
 
 __author__ = "730544769"
 
@@ -11,8 +11,20 @@ row_print: int = 1
 
 secret_row: int = 4
 secret_column: int = 4
-boat_row = 3
-boat_column = 2
+boat_row = int(input("pick a row: "))
+boat_row = int(boat_row)
+if boat_row > 4 or boat_row < 1:
+    while boat_row > 4:
+        boat_row = int(input("The grid is only 4 by 4. Try again: "))
+    while boat_row < 1:
+        boat_row = int(input("The grid is only 4 by 4. Try again: "))
+boat_column = int(input("pick a column: "))
+boat_column = int(boat_column)
+if boat_column > 4 or boat_row < 1:
+    while boat_column > 4:
+        boat_column = int(input("The grid is only 4 by 4. Try again: "))
+    while boat_column < 1:
+        boat_column = int(input("The grid is only 4 by 4. Try again: "))
 guess_row = int(input("guess a row: "))
 guess_row = int(guess_row)
 if guess_row > 4 or guess_row < 1:
@@ -53,3 +65,4 @@ if guess_row != boat_row and guess_column == boat_column:
     print("Close! Correct column, wrong row. ")
 if guess_row != boat_row and guess_column != boat_column:
     print("Miss! ")
+
