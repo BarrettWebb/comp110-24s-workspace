@@ -44,5 +44,3 @@ def extend(a_list: list[int], b_list: list[int]) -> None:
     while a < len(b_list): 
         a_list.append(b_list[a])
         a += 1
-
-
