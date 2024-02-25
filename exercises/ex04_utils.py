@@ -7,6 +7,8 @@ __author__ = "730544769"
 def all(a_list: list[int], number: int) -> bool:
     """All numbers are equal to other number."""
     a = 0
+    if a_list == []:
+        return False
     while a < len(a_list):
         if a_list[a] != number:
             return False
@@ -20,10 +22,10 @@ def max(a_list: list[int]) -> int:
     if len(a_list) == 0:
         raise ValueError("max() arg is an empty List")
     a = 0
-    max_number = 0
+    max_number = a_list[a]
     while a < len(a_list):
         if a_list[a] > max_number:
-            max_number == a_list[a]
+            max_number += (a_list[a] - max_number)
             a += 1
         else:
             a += 1
